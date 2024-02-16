@@ -17,15 +17,14 @@ class report:
             print("service index: " + (str)(action[2]) + "\nstart service time: "+ (str)(action[1]) + "\nend service time: " + (str)(action[0]))
 
 class simulation:
-    def __init__(self, n_servers, client_distribution, service_distribution) -> None:
+    def __init__(self, n_servers, client_distribution, servers_distribution) -> None:
         self.current_time = 0
         self.report = report()
         self.busy_servers = server_heap()
         self.client_queue = client_queue()
         self.active_servers = server_heap()
         self.client_distribution = client_distribution
-        self.service_distribution = service_distribution
-        for i in range(n_servers): self.active_servers.push(i)
+        for i in range(n_servers): self.active_servers.push((i, servers_distribution[i]))
 
     def simulate(self, n_clients):
         for i in range(n_clients): self.add_new_client()
@@ -44,7 +43,7 @@ class simulation:
             self.client_queue.push(self.current_time)
         else:
             server = self.active_servers.pop()
-            end_time = self.current_time + self.service_distribution()
+            end_time = self.current_time + server[1]()
             self.report.push_action(self.current_time, end_time)
             self.busy_servers.push((end_time, server))
 
@@ -61,7 +60,7 @@ class simulation:
         return time
 
     def process_one_client_from_queue(self, time):
-        end_time = time + self.service_distribution()
+        end_time = time + self.active_servers.top()[1]()
         self.report.push_action(time, end_time)
         self.client_queue.pop()
         self.busy_servers.push((end_time, self.active_servers.pop()))

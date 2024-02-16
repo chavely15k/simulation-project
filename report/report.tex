@@ -1,0 +1,83 @@
+\documentclass[article]{amsart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\setlist[description]{}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+  linktoc=all
+}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+
+\begin{document}
+\thispagestyle{empty}
+\title{
+	Simulaci\'on de eventos discretos
+}
+\author{Chavely Gonz\'alez Acosta C412}
+\date{\today}
+\maketitle
+\pagenumbering{gobble}
+
+\newpage
+
+\pagenumbering{arabic}
+
+\tableofcontents
+
+\pagestyle{fancy}
+\newpage
+
+\section{Introducci\'on}
+El proyecto de simulación de eventos discretos tiene como objetivo analizar y entender mejor ciertos fenómenos a través de la modelización y experimentación. Se busca aplicar los principios de la simulación de eventos discretos para obtener resultados que permitan tomar decisiones informadas.
+
+El sistema específico a simular es un sistema de servidores con n servidores en paralelo, donde los clientes llegan y son atendidos por los servidores según ciertas reglas de servicio. Las variables de interés para este proyecto incluyen el tiempo entre los arribos de los clientes, la distribución de los servidores ocupados y la duración del servicio en cada servidor.
+
+\section{Detalles de implementaci\'on}
+La implementación de la simulación de eventos discretos se basa en los siguientes pasos:
+
+    Modelado del sistema: Definir el sistema de servidores y las reglas de servicio, incluyendo la distribución de llegada de los clientes (M) y las distribuciones de servicio en los servidores (Gi).
+
+    Generación de eventos: Utilizar generadores de números pseudoaleatorios para simular los tiempos de llegada de los clientes y los tiempos de servicio en los servidores.
+
+    Procesamiento de eventos: Implementar la lógica para manejar los eventos de llegada y salida de los clientes, así como la asignación de servidores y la gestión de la cola de clientes.
+
+    Simulación: Ejecutar la simulación para un número determinado de eventos o hasta que se cumpla una condición de parada.
+
+    Análisis de resultados: Recopilar y analizar los datos de la simulación para entender el comportamiento del sistema y extraer insights.
+
+\section{Resultados y experimentos}
+
+Los resultados de la simulación proporcionarán información valiosa sobre el comportamiento del sistema bajo condiciones específicas. Esto incluirá:
+
+    Hallazgos de la simulación: Observaciones sobre la utilización de los servidores, la duración de las colas y los tiempos de servicio.
+
+    Interpretación de los resultados: Análisis de cómo los resultados se relacionan con las variables de interés y las expectativas del modelo.
+
+    Análisis estadístico: Evaluación de las variables de interés mediante análisis estadístico para entender su comportamiento y variabilidad.
+
+    Análisis de parada de la simulación: Identificación de las condiciones que se utilizaron para detener la simulación y su impacto en los resultados.
+
+\section{Modelo matem\'atico}
+
+El modelo matemático para el sistema de servidores se basa en la teoría de colas y la simulación de eventos discretos. Los aspectos clave del modelo incluyen:
+
+    Descripción del modelo de simulación: Explicación detallada de cómo se modelan los eventos de llegada y salida de los clientes, la asignación de servidores y la gestión de la cola.
+
+    Supuestos y restricciones: Definición de los supuestos del modelo, como la independencia de los eventos de llegada y la asincronicidad de los servicios.
+
+El modelo matemático se ajustará para el proyecto específico, considerando las características particulares del sistema de servidores y las distribuciones de las variables de interés.
+
+Para el siguiente proyecto, se considerará un sistema con n servidores en paralelo, donde los clientes llegan y son atendidos según las reglas especificadas. La simulación permitirá analizar el comportamiento del sistema bajo diferentes condiciones y proporcionará información valiosa para la toma de decisiones.
+
+\end{document}
