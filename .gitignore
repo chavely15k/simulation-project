@@ -1,1 +1,9 @@
-__pycache__/
+#eliminar generados de python
+*__pycache__/
+#eliminar generados de latext
+*.aux
+*.aut
+*.log
+*.pdf
+*.toc
+*.gz
