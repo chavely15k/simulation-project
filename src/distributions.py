@@ -23,3 +23,5 @@ def generate_beta(a=2, b=5):
 
 def generate_gamma(shape=2, scale=1):
     return round(np.random.gamma(shape, scale))
+
+distributions = [generate_poisson, generate_geometric, generate_uniform, generate_binomial, generate_exponential, generate_normal, generate_beta, generate_gamma]
