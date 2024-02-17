@@ -10,8 +10,9 @@ from event_system import *
 
 class SimulationTest(unittest.TestCase):
     def test_simulate(self):
-        sim = simulation(2, get_uniform, [get_uniform, get_uniform])
+        sim = simulation(generate_uniform, [generate_uniform, generate_uniform])
         sim.simulate(10)
 
 if __name__ == '__main__':
     unittest.main()
+    

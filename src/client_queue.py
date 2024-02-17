@@ -1,12 +1,12 @@
 from collections import *
 
-class client_queue:
+class queue:
     def __init__(self) -> None:
         self.queue = deque()
     def push(self, item):
         self.queue.append(item)
     def pop(self):
-        self.queue.popleft()
+        return self.queue.popleft()
     def front(self):
         return self.queue[0]
     def empty(self):

@@ -1,7 +1,7 @@
 from math import inf
 from heapq import *
 
-class server_heap:
+class heap:
     def __init__(self) -> None:
         self.heap = []
     def empty(self):
