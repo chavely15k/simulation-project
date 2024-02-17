@@ -1,10 +1,5 @@
 #eliminar generados de python
 *__pycache__/
 #eliminar generados de latext
-*.aux
-*.aut
-*.log
-*.pdf
-*.toc
-*.out
-*.gz
+*report/
+!report/.tex
