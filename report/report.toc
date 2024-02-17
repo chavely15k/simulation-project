@@ -1,4 +1,0 @@
-\contentsline {section}{\tocsection {}{1}{Introducci\'on}}{2}{section.1}%
-\contentsline {section}{\tocsection {}{2}{Detalles de implementaci\'on}}{3}{section.2}%
-\contentsline {section}{\tocsection {}{3}{Resultados y experimentos}}{5}{section.3}%
-\contentsline {section}{\tocsection {}{4}{Modelo matem\'atico}}{6}{section.4}%
