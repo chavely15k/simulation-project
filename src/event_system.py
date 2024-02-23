@@ -17,12 +17,16 @@ class report:
         self.actions = []
     def push_action(self, action):
         self.actions.append(action)
-    def print(self):
-        for action in self.actions:
-            print(action)
+    def __str__(self) -> str:
+        result =          "#############################################################\n"
+        result = result + "################# Reporte de la simulacion: #################\n"
+        result = result + "#############################################################\n"
+        for i in range(len(self.actions)):
+            result = result + str(i) + ". " + str(self.actions[i]) + "\n"
+        return result
 
 class simulation:
-    def __init__(self, client_distribution, servers_distribution) -> None:
+    def __init__(self, client_distribution, servers_distribution:list) -> None:
         self.current_time = 0
         self.report = report()
         self.busy_servers = heap()
@@ -36,7 +40,7 @@ class simulation:
             self.current_time = self.current_time + self.client_distribution()
             self.add_new_client(client)
         self.refresh(inf) #process to the end
-        self.report.print()
+        print(self.report)
         self.reset_simulation()
 
     def add_new_client(self, client):

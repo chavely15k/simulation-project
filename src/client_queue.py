@@ -2,15 +2,21 @@ from collections import *
 
 class queue:
     def __init__(self) -> None:
-        self.queue = deque()
+        self.first = 0
+        self.count = 0
     def push(self, item):
-        self.queue.append(item)
+        if self.count == 0:
+            self.first = item
+        self.count = self.count + 1
     def pop(self):
-        return self.queue.popleft()
+        if self.count == 0: return None
+        self.count = self.count - 1
+        self.first = self.first + 1
+        return self.first - 1
     def front(self):
-        return self.queue[0]
+        return self.first
     def empty(self):
-        return len(self.queue) == 0
+        return self.count == 0
 
 
     
