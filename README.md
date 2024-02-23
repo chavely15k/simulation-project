@@ -11,4 +11,4 @@ La distribución de servicio en el servidor i es Gi.
 ## Estructura del repositorio:
 
 * La implementación del sistema se encuentra en la carpeta src.
-* La orientación del proyecto y el informe en LaTeX se encuentra en la carpeta report.
+* La orientación del proyecto y el informe en LaTeX se encuentran en la carpeta report.
