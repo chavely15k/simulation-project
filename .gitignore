@@ -3,3 +3,4 @@
 #eliminar generados de latext
 *report/
 !report/.tex
+!report/.md
