@@ -1,0 +1,104 @@
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 1
+
+Porcentaje de ocupacion de los servidores:
+[100.0]
+
+Promedio de tiempo pasado por los clientes en cola: 851.67
+
+Promedio de clientes ecolados por simulacion: 9889.86
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 2
+
+Porcentaje de ocupacion de los servidores:
+[58.96, 41.04]
+
+Promedio de tiempo pasado por los clientes en cola: 10.52
+
+Promedio de clientes ecolados por simulacion: 3179.67
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 3
+
+Porcentaje de ocupacion de los servidores:
+[52.57, 31.86, 15.57]
+
+Promedio de tiempo pasado por los clientes en cola: 5.51
+
+Promedio de clientes ecolados por simulacion: 826.97
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 4
+
+Porcentaje de ocupacion de los servidores:
+[51.42, 30.23, 13.59, 4.76]
+
+Promedio de tiempo pasado por los clientes en cola: 3.81
+
+Promedio de clientes ecolados por simulacion: 179.57
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 5
+
+Porcentaje de ocupacion de los servidores:
+[51.31, 29.91, 13.19, 4.42, 1.17]
+
+Promedio de tiempo pasado por los clientes en cola: 3.03
+
+Promedio de clientes ecolados por simulacion: 33.97
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 6
+
+Porcentaje de ocupacion de los servidores:
+[51.2, 29.93, 13.2, 4.33, 1.11, 0.23]
+
+Promedio de tiempo pasado por los clientes en cola: 2.41
+
+Promedio de clientes ecolados por simulacion: 5.16
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 7
+
+Porcentaje de ocupacion de los servidores:
+[51.21, 29.91, 13.2, 4.34, 1.08, 0.22, 0.04]
+
+Promedio de tiempo pasado por los clientes en cola: 0.92
+
+Promedio de clientes ecolados por simulacion: 0.79
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 8
+
+Porcentaje de ocupacion de los servidores:
+[51.18, 29.97, 13.16, 4.33, 1.09, 0.21, 0.04, 0.01]
+
+Promedio de tiempo pasado por los clientes en cola: 0.2
+
+Promedio de clientes ecolados por simulacion: 0.15

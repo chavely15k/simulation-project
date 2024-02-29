@@ -1,0 +1,104 @@
+chavely@chavely-X550LD:~/Documents/start up/cs/simulacion/simulation-project$ python src/solution.py 
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 1
+
+Porcentaje de ocupacion de los servidores:
+[100.0]
+
+Promedio de tiempo pasado por los clientes en cola: 241.99
+
+Promedio de clientes ecolados por simulacion: 963.8
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 2
+
+Porcentaje de ocupacion de los servidores:
+[59.16, 40.84]
+
+Promedio de tiempo pasado por los clientes en cola: 10.1
+
+Promedio de clientes ecolados por simulacion: 316.98
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 3
+
+Porcentaje de ocupacion de los servidores:
+[52.53, 32.02, 15.45]
+
+Promedio de tiempo pasado por los clientes en cola: 5.38
+
+Promedio de clientes ecolados por simulacion: 83.65
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 4
+
+Porcentaje de ocupacion de los servidores:
+[51.5, 30.08, 13.62, 4.8]
+
+Promedio de tiempo pasado por los clientes en cola: 3.68
+
+Promedio de clientes ecolados por simulacion: 19.1
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 5
+
+Porcentaje de ocupacion de los servidores:
+[51.44, 29.88, 13.0, 4.47, 1.21]
+
+Promedio de tiempo pasado por los clientes en cola: 2.42
+
+Promedio de clientes ecolados por simulacion: 3.49
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 6
+
+Porcentaje de ocupacion de los servidores:
+[51.0, 30.04, 13.34, 4.35, 1.07, 0.21]
+
+Promedio de tiempo pasado por los clientes en cola: 0.64
+
+Promedio de clientes ecolados por simulacion: 0.38
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 7
+
+Porcentaje de ocupacion de los servidores:
+[51.18, 29.77, 13.28, 4.35, 1.14, 0.26, 0.03]
+
+Promedio de tiempo pasado por los clientes en cola: 0.32
+
+Promedio de clientes ecolados por simulacion: 0.15
+
+----------------------------------------------------------------
+----------------- Reporte de las simulaciones: -----------------
+----------------------------------------------------------------
+
+Cantidad de simulaciones: 100. Cantidad de servidores: 8
+
+Porcentaje de ocupacion de los servidores:
+[51.32, 29.92, 13.08, 4.28, 1.15, 0.22, 0.03, 0.0]
+
+Promedio de tiempo pasado por los clientes en cola: 0.0
+
+Promedio de clientes ecolados por simulacion: 0.0
