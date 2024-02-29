@@ -12,7 +12,7 @@ def generate_uniform(low=1, high=10):
 def generate_binomial(n=10, p=0.5):
     return np.random.binomial(n, p)
 
-def generate_exponential(scale=1):
+def generate_exponential(scale=10):
     return round(np.random.exponential(scale))
 
 def generate_normal(loc=0, scale=1):

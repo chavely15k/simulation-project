@@ -1,37 +1,29 @@
 from event_system import *
-from distributions import distributions
+from distributions import *
+import time
+import matplotlib.pyplot as plt
 
-def ask_how_many_clients():
-    print("Escriba la cantidad de clientes para la simulacion.")
-    return (int)(input())
-def ask_how_many_servers():
-    print("Escriba la cantidad de servidores para la simulacion.")
-    return (int)(input())
-def ask_for_client_distribution():
-    print("Ecoja la distribucion que desea utilizar para el intervalo entre los clientes(escribiendo el numero correspondiente):")
-    for i in range(len(distributions)):
-        print((str)(i) + " " + distributions[i].__name__)
-    return (int)(input())
-def ask_for_servers_distributions(idx):
-    print("Ecoja las distribuciones que desea utilizar para el timepo de servicio en cada servidor(escribiendo el numero correspondiente):")
-    for i in range(len(distributions)):
-        print((str)(i) + " " + distributions[i].__name__)
-    distribution = distributions[(int)(input())]
-    print("escriba la cantidad de servidores a partir del " + (str)(idx) + "-esimo a aplicarsela")
-    return distribution, (int)(input())
-    
-    
+start = time.time()
+# for i in range(pow(10, 8)): pass
+# t1 = time.time()
+# print(t1 - start)
+for i in range(3, 5):
+    n_clients = pow(10, i)
+    client_distribution = generate_exponential
+    servers_distributions = []; x = []; y = []
+    for j in range (1, 9):
+        servers_distributions.append(generate_exponential); x.append(j)
+        sim = simulation(n_clients, client_distribution, servers_distributions)
+        for i in range(100):
+            sim.simulate()
+        y.append(sim.report.get_full_report_info()[1])
+        print(sim.report)
+    plt.figure()
+    plt.xlabel('Cantidad de servidores'); plt.ylabel('Tiempo de espera promedio')
+    plt.title(f"Tiempo de espera promedio por cantidad de servidores con {n_clients} clientes")
+    plt.plot(x, y); plt.savefig(f'assets/Tiempo de espera promedio por cantidad de servidores con {n_clients} clientes.png')
+    plt.clf()
 
-m_clients = ask_how_many_clients()
-n_servers = ask_how_many_servers()
-client_distribution = distributions[ask_for_client_distribution()]
-servers_distributions = []
-i = 0
-while i < n_servers:
-    d, k = ask_for_servers_distributions(i)
-    for j in range(min(k, n_servers - i)):
-        servers_distributions.append(d)
-    i = i + k
+end = time.time()
 
-sim = simulation(client_distribution, servers_distributions)
-sim.simulate(m_clients)
+print(str(end-start))

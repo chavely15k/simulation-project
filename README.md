@@ -8,7 +8,12 @@ Cuando un cliente completa el servicio con un servidor (no importa cuál), ese c
 
 La distribución de servicio en el servidor i es Gi.
 
-## Estructura del repositorio:
+## Estructura del repositorio
 
 * La implementación del sistema se encuentra en la carpeta src.
 * La orientación del proyecto y el informe en LaTeX se encuentran en la carpeta report.
+
+## Correr las simulaciones
+
+1. Abrir la carpeta del proyecto en la consola.
+2. Correr el siguiente comando: `python src/solution.py`.

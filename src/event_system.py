@@ -1,3 +1,4 @@
+import time
 from client_queue import *
 from server_heap import *
 from distributions import *
@@ -5,22 +6,29 @@ from report import *
 
 
 class simulation:
-    def __init__(self, client_distribution, servers_distribution:list) -> None:
+    def __init__(self, n_clients, client_distribution, servers_distribution:list) -> None:
         self.current_time = 0
-        self.report = report()
+        self.reports = []
+        self.n_clients = n_clients
+        self.report = report(n_clients, len(servers_distribution))
+        self.current_report = None
         self.busy_servers = heap()
         self.client_queue = queue()
         self.active_servers = heap()
         self.client_distribution = client_distribution
         for i in range(len(servers_distribution)): self.active_servers.push((i, servers_distribution[i]))
 
-    def simulate(self, n_clients):
-        for client in range(n_clients): 
+    def simulate(self):
+        start = time.time()
+        self.report.add_new_report()
+        self.curr_report = self.report.get_current_report()
+        for client in range(self.n_clients): 
             self.current_time = self.current_time + self.client_distribution()
             self.add_new_client(client)
         self.refresh(inf) #process to the end
-        print(self.report)
-        self.reset_simulation()
+        end = time.time()
+        self.curr_report.set_time(end - start)
+        self.end_simulation()
 
     def add_new_client(self, client):
         self.refresh(self.current_time)
@@ -38,26 +46,26 @@ class simulation:
                 self.process_one_client_from_queue(time)
 
     def process_one_client_from_queue(self, time):
-        client = self.client_queue.pop()
+        client, start_time = self.client_queue.pop()
+        self.curr_report.push_action(action(client, None, 'desencolar', time, time - start_time))
         self.process(client, time)
     
     def process_next_service(self):
         time, client, server = self.busy_servers.pop()
-        self.report.push_action(action(client, server[0], "terminar", time))
+        self.curr_report.push_action(action(client, server[0], "terminar", time))
         self.active_servers.push(server)
         return time
     
     def push_to_queue(self, client):
-        self.report.push_action(action(client, None, "encolar", self.current_time))
-        self.client_queue.push(client)
+        self.curr_report.push_action(action(client, None, "encolar", self.current_time))
+        self.client_queue.push((client, self.current_time))
     
     def process(self, client, time):
         server = self.active_servers.pop()
         end_time = time + server[1]()
-        self.report.push_action(action(client, server[0], "comenzar", time))
+        self.curr_report.push_action(action(client, server[0], "comenzar", time, end_time-time))
         self.busy_servers.push((end_time, client, server))
 
-    def reset_simulation(self):
-        self.report = report()
+    def end_simulation(self):
+        self.curr_report = None
         self.current_time = 0
-

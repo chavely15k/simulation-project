@@ -13,3 +13,5 @@ class heap:
     def top(self):
         if not self.empty(): return self.heap[0]
         else: return None
+    def len(self):
+        return len(self.heap)
