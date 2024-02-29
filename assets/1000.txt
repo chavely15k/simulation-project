@@ -1,4 +1,3 @@
-chavely@chavely-X550LD:~/Documents/start up/cs/simulacion/simulation-project$ python src/solution.py 
 ----------------------------------------------------------------
 ----------------- Reporte de las simulaciones: -----------------
 ----------------------------------------------------------------
